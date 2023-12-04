@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		657C5FB4471799BEEF4DB12D /* Pods_ChatRealTimeFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9D3822AC27C1EB1AE9063F /* Pods_ChatRealTimeFirebase.framework */; };
 		AAD4D3042B1E10290056639A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D3032B1E10290056639A /* AppDelegate.swift */; };
 		AAD4D3062B1E10290056639A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D3052B1E10290056639A /* SceneDelegate.swift */; };
 		AAD4D3082B1E10290056639A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4D3072B1E10290056639A /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		AAD4D30C2B1E102A0056639A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD4D30F2B1E102A0056639A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD4D3112B1E102A0056639A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1CC7473EF62AB4FE3B9874 /* Pods-ChatRealTimeFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatRealTimeFirebase.debug.xcconfig"; path = "Target Support Files/Pods-ChatRealTimeFirebase/Pods-ChatRealTimeFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9D3822AC27C1EB1AE9063F /* Pods_ChatRealTimeFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatRealTimeFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2321D80378DB0C14E638DE0 /* Pods-ChatRealTimeFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatRealTimeFirebase.release.xcconfig"; path = "Target Support Files/Pods-ChatRealTimeFirebase/Pods-ChatRealTimeFirebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657C5FB4471799BEEF4DB12D /* Pods_ChatRealTimeFirebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		755995888ADA3EA62E54856B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD9D3822AC27C1EB1AE9063F /* Pods_ChatRealTimeFirebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAD4D2F72B1E10290056639A = {
 			isa = PBXGroup;
 			children = (
 				AAD4D3022B1E10290056639A /* ChatRealTimeFirebase */,
 				AAD4D3012B1E10290056639A /* Products */,
+				AD4783FA420EAC58F816002C /* Pods */,
+				755995888ADA3EA62E54856B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = ChatRealTimeFirebase;
 			sourceTree = "<group>";
 		};
+		AD4783FA420EAC58F816002C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD1CC7473EF62AB4FE3B9874 /* Pods-ChatRealTimeFirebase.debug.xcconfig */,
+				F2321D80378DB0C14E638DE0 /* Pods-ChatRealTimeFirebase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAD4D3142B1E102A0056639A /* Build configuration list for PBXNativeTarget "ChatRealTimeFirebase" */;
 			buildPhases = (
+				EF8277016B130A453CE5464A /* [CP] Check Pods Manifest.lock */,
 				AAD4D2FC2B1E10290056639A /* Sources */,
 				AAD4D2FD2B1E10290056639A /* Frameworks */,
 				AAD4D2FE2B1E10290056639A /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF8277016B130A453CE5464A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatRealTimeFirebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAD4D2FC2B1E10290056639A /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		AAD4D3152B1E102A0056639A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD1CC7473EF62AB4FE3B9874 /* Pods-ChatRealTimeFirebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +362,7 @@
 		};
 		AAD4D3162B1E102A0056639A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2321D80378DB0C14E638DE0 /* Pods-ChatRealTimeFirebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

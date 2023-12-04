@@ -1,0 +1,6 @@
+framework module Pods_ChatRealTimeFirebase {
+  umbrella header "Pods-ChatRealTimeFirebase-umbrella.h"
+
+  export *
+  module * { export * }
+}
